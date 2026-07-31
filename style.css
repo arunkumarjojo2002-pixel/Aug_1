@@ -1,0 +1,985 @@
+/* ==========================================
+   GUBA ❤️ BHALU
+   Girlfriend's Day Website
+   style.css (Part 1)
+========================================== */
+
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+    color:#fff;
+
+    min-height:100vh;
+
+    background:linear-gradient(-45deg,
+    #ff4d88,
+    #ff80ab,
+    #ff99c8,
+    #ffc2d1);
+
+    background-size:400% 400%;
+
+    animation:bgMove 12s ease infinite;
+
+}
+
+/* ---------- BACKGROUND ---------- */
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+#hearts-container,
+#petals-container{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+/* ---------- INTRO ---------- */
+
+#intro-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,105,180,.15);
+
+    backdrop-filter:blur(10px);
+
+    z-index:9999;
+
+}
+
+.intro-card{
+
+    width:90%;
+
+    max-width:450px;
+
+    text-align:center;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 15px 45px rgba(0,0,0,.2);
+
+}
+
+.intro-card h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.intro-card h1{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+.intro-card p{
+
+    font-size:20px;
+
+}
+
+/* ---------- GIFT ---------- */
+
+#gift-box{
+
+    width:140px;
+
+    height:140px;
+
+    margin:35px auto;
+
+    position:relative;
+
+    cursor:pointer;
+
+    animation:bounce 2s infinite;
+
+}
+
+.gift-body{
+
+    width:140px;
+
+    height:100px;
+
+    background:#ff3b7d;
+
+    border-radius:10px;
+
+    position:absolute;
+
+    bottom:0;
+
+}
+
+.gift-lid{
+
+    width:150px;
+
+    height:35px;
+
+    background:#ff5c97;
+
+    border-radius:10px;
+
+    position:absolute;
+
+    top:5px;
+
+    left:-5px;
+
+}
+
+.gift-ribbon-v{
+
+    width:18px;
+
+    height:140px;
+
+    background:#fff;
+
+    position:absolute;
+
+    left:61px;
+
+}
+
+.gift-ribbon-h{
+
+    width:140px;
+
+    height:18px;
+
+    background:#fff;
+
+    position:absolute;
+
+    top:48px;
+
+}
+
+.tap-text{
+
+    animation:blink 1.5s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        opacity:.4;
+
+    }
+
+}
+
+/* ---------- LOADING ---------- */
+
+#loading-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#ff77a9;
+
+    z-index:9998;
+
+}
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.loading-bar{
+
+    width:320px;
+
+    max-width:90%;
+
+    height:16px;
+
+    border-radius:20px;
+
+    background:#ffd1e1;
+
+    overflow:hidden;
+
+    margin:25px 0;
+
+}
+
+.loading-progress{
+
+    width:0%;
+
+    height:100%;
+
+    background:white;
+
+}
+
+/* ---------- MAIN ---------- */
+
+#main-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px 20px;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.glass-card{
+
+    width:100%;
+
+    max-width:750px;
+
+    text-align:center;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.20);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 15px 45px rgba(0,0,0,.2);
+
+}
+
+#changing-title{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.subtitle{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+.love-timer{
+
+    margin:35px 0;
+
+}
+
+#relationship-counter{
+
+    margin-top:15px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.typewriter-box{
+
+    min-height:80px;
+
+    margin:30px 0;
+
+}
+
+.question{
+
+    margin:30px 0;
+
+    font-size:30px;
+
+}
+
+#no-message{
+
+    margin-bottom:20px;
+
+    font-size:20px;
+
+}
+
+/* ---------- BUTTONS ---------- */
+
+.button-area{
+
+    position:relative;
+
+    width:100%;
+
+    height:140px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.button-area button{
+
+    padding:16px 38px;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-weight:700;
+
+}
+
+#yes-btn{
+
+    background:#ff2e63;
+
+    color:white;
+
+    box-shadow:0 0 20px rgba(255,46,99,.5);
+
+}
+
+#yes-btn:hover{
+
+    transform:scale(1.08);
+
+}
+
+#no-btn{
+
+    background:white;
+
+    color:#ff2e63;
+
+}
+
+#no-btn:hover{
+
+    transform:scale(.95);
+
+}
+
+/* ---------- LOVE REASONS ---------- */
+
+.love-reasons{
+
+    margin-top:40px;
+
+}
+
+#reason-btn{
+
+    background:#ff5c97;
+
+    color:white;
+
+    border:none;
+
+    border-radius:30px;
+
+    padding:14px 30px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+#reason-text{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+}
+/* ==========================================
+   GUBA ❤️ BHALU
+   style.css (Part 2)
+==========================================*/
+
+/* ---------- LOVE LETTER POPUP ---------- */
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    animation:fadeIn .5s ease;
+}
+
+.popup-card{
+
+    width:90%;
+    max-width:700px;
+
+    max-height:85vh;
+    overflow-y:auto;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.95);
+
+    color:#ff2e63;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.popup-card h2{
+
+    font-size:34px;
+    margin-bottom:25px;
+
+}
+
+.popup-card p{
+
+    line-height:2;
+    font-size:18px;
+
+}
+
+.popup-card button{
+
+    margin-top:30px;
+
+    background:#ff2e63;
+
+    color:white;
+
+    border:none;
+
+    border-radius:35px;
+
+    padding:15px 35px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.popup-card button:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ---------- GALLERY ---------- */
+
+#gallery-section{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+}
+
+.gallery-subtitle{
+
+    margin:15px 0 40px;
+
+    font-size:20px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+.photo-card{
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.photo-card:hover{
+
+    transform:translateY(-8px) scale(1.03);
+
+}
+
+.photo-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* ---------- FINAL MESSAGE ---------- */
+
+#final-message{
+
+    text-align:center;
+
+    padding:80px 25px;
+
+}
+
+#final-message h1{
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+#final-message h2{
+
+    font-size:32px;
+
+    margin:15px 0;
+
+}
+
+#final-message p{
+
+    max-width:700px;
+
+    margin:25px auto;
+
+    line-height:1.9;
+
+    font-size:20px;
+
+}
+
+/* ---------- MUSIC BUTTON ---------- */
+
+#music-btn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    border:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    background:#ff2e63;
+
+    color:white;
+
+    box-shadow:0 0 25px rgba(255,46,99,.5);
+
+    z-index:999;
+
+    transition:.3s;
+
+}
+
+#music-btn:hover{
+
+    transform:scale(1.15) rotate(10deg);
+
+}
+
+/* ---------- FLOATING HEART ---------- */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    font-size:22px;
+
+    animation:floatHeart linear forwards;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:translateY(0) scale(1);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh) scale(1.8);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ---------- FALLING PETALS ---------- */
+
+.petal{
+
+    position:fixed;
+
+    top:-50px;
+
+    font-size:20px;
+
+    animation:fallPetal linear forwards;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+@keyframes fallPetal{
+
+    from{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translateY(120vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ---------- SPARKLES ---------- */
+
+.sparkle{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    font-size:18px;
+
+    animation:sparkleAnim 2s linear forwards;
+
+    z-index:2;
+
+}
+
+@keyframes sparkleAnim{
+
+    from{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:translateY(-30px) scale(2);
+
+    }
+
+}
+
+/* ---------- FADE ---------- */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff5c97;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ffd9e8;
+
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:768px){
+
+    .glass-card{
+
+        padding:30px 20px;
+
+    }
+
+    #changing-title{
+
+        font-size:32px;
+
+    }
+
+    .subtitle{
+
+        font-size:18px;
+
+    }
+
+    .question{
+
+        font-size:24px;
+
+    }
+
+    .button-area{
+
+        flex-direction:column;
+
+        height:180px;
+
+    }
+
+    .button-area button{
+
+        width:220px;
+
+    }
+
+    .popup-card{
+
+        padding:25px;
+
+    }
+
+    .popup-card h2{
+
+        font-size:28px;
+
+    }
+
+    #final-message h1{
+
+        font-size:38px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .intro-card h1{
+
+        font-size:32px;
+
+    }
+
+    .intro-card h3{
+
+        font-size:22px;
+
+    }
+
+    .glass-card{
+
+        padding:25px 18px;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #music-btn{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:24px;
+
+    }
+
+}
+
+/* ==========================================
+   END OF STYLE.CSS
+==========================================*/

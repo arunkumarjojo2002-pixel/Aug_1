@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forever Yours ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+
+    <div id="hearts-container"></div>
+
+    <div id="petals-container"></div>
+
+    <!-- Celebration -->
+
+    <section id="yes-page">
+
+        <div class="glass-card">
+
+            <h1>
+
+                🎉 She Said YES! 🎉
+
+            </h1>
+
+            <h2>
+
+                Happy Girlfriend's Day,
+
+                My Beautiful Bhalu ❤️
+
+            </h2>
+
+            <p class="subtitle">
+
+                Today is another beautiful reminder
+
+                of how lucky I am to have you.
+
+            </p>
+
+            <div class="love-timer">
+
+                <h2>
+
+                    ❤️ Together Since ❤️
+
+                </h2>
+
+                <p>
+
+                    <strong>
+
+                        14 December 2023
+
+                    </strong>
+
+                </p>
+
+                <div id="relationship-counter">
+
+                    Loading...
+
+                </div>
+
+            </div>
+
+            <hr style="margin:40px 0;">
+
+            <div class="popup-card">
+
+                <h2>
+
+                    💌 A Letter For My Bhalu 💌
+
+                </h2>
+
+                <p>
+
+                    Dear Bhalu,
+
+                    <br><br>
+
+                    Happy Girlfriend's Day ❤️
+
+                    <br><br>
+
+                    Every day with you becomes one of my favorite memories.
+
+                    <br><br>
+
+                    Thank you for standing beside me,
+
+                    believing in me,
+
+                    making me smile,
+
+                    and filling my life with happiness.
+
+                    <br><br>
+
+                    Since **14 December 2023**,
+
+                    you've made my world brighter.
+
+                    <br><br>
+
+                    I promise to always
+
+                    respect you,
+
+                    support you,
+
+                    care for you,
+
+                    and love you with all my heart.
+
+                    <br><br>
+
+                    No matter what life brings,
+
+                    I want us to face it together.
+
+                    <br><br>
+
+                    I hope we celebrate many more
+
+                    Girlfriend's Days together.
+
+                    <br><br>
+
+                    ❤️
+
+                    I Love You So Much
+
+                    ❤️
+
+                    <br><br>
+
+                    Forever Yours,
+
+                    <br><br>
+
+                    <strong>
+
+                        Guba ❤️
+
+                    </strong>
+
+                </p>
+
+            </div>
+            <!-- Memory Gallery -->
+<hr style="margin:40px 0;">
+
+<div class="memory-gallery">
+    <h2>📸 Our Beautiful Memories</h2>
+
+    <div class="gallery">
+        <img src="images/photo1.jpg" alt="Memory 1">
+        <img src="images/photo2.jpg" alt="Memory 2">
+        <img src="images/photo3.jpg" alt="Memory 3">
+        <img src="images/photo4.jpg" alt="Memory 4">
+    </div>
+</div>
+
+<!-- Reasons I Love You -->
+<hr style="margin:40px 0;">
+
+<div class="popup-card">
+    <h2>❤️ Reasons I Love You ❤️</h2>
+
+    <ul class="love-list">
+        <li>❤️ Your beautiful smile brightens my day.</li>
+        <li>❤️ You always believe in me.</li>
+        <li>❤️ You make every moment special.</li>
+        <li>❤️ You understand me better than anyone.</li>
+        <li>❤️ You are my peace and my happiness.</li>
+        <li>❤️ I love the way you care for me.</li>
+        <li>❤️ Life feels complete with you.</li>
+    </ul>
+</div>
+
+<!-- Buttons -->
+<div class="buttons">
+    <button id="music-btn">🎵 Play Our Song</button>
+
+    <a href="index.html">
+        <button>🏠 Back to Home</button>
+    </a>
+</div>
+
+<!-- Background Music -->
+<audio id="bg-music" loop>
+    <source src="music/love.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+<script>
+window.onload = () => {
+    confetti({
+        particleCount: 250,
+        spread: 180,
+        origin: { y: 0.6 }
+    });
+};
+
+const music = document.getElementById("bg-music");
+const musicBtn = document.getElementById("music-btn");
+
+musicBtn.addEventListener("click", () => {
+    if (music.paused) {
+        music.play();
+        musicBtn.innerHTML = "⏸ Pause Music";
+    } else {
+        music.pause();
+        musicBtn.innerHTML = "🎵 Play Our Song";
+    }
+});
+</script>
+
+<!-- Your Existing Script -->
+<script src="script.js"></script>
+
+</body>
+</html>
