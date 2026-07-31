@@ -133,9 +133,9 @@ const titles = [
 
 "You Make My World Better 🌍",
 
-"My Forever Bhalu 🥰",
+"My Clumsy Bhalu 🥰",
 
-"Forever Yours ❤️"
+"Hamesha Pareshan Karunga ❤️"
 
 ];
 
@@ -169,7 +169,7 @@ const reasons = [
 
 "You are my safest place. 🥰",
 
-"I love your kindness. 🌸",
+"I love your cute little chicks when you smile. 🌸",
 
 "I love your cute little habits. ❤️",
 
@@ -177,7 +177,7 @@ const reasons = [
 
 "I'm lucky to have you. 💗",
 
-"I'll always choose you. 💍"
+"I'll always choose you."
 
 ];
 
